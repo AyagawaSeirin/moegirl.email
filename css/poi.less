@@ -1,0 +1,455 @@
+* {
+  font-family: "Microsoft YaHei","PingFang SC","sans-serif";
+  box-sizing: border-box;
+}
+.mdi{
+    display: inline-block;
+    font-family:"Material Design Icons";
+    font-size: inherit;
+    text-rendering: auto;
+    line-height: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+rt{
+    font-size:100%;
+    transform:scale(0.8);
+}
+code,code *{
+  font-family:  Consolas, "Microsoft YaHei Light";
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body{
+    margin:0;
+    overflow:hidden;
+    
+}
+.bg{
+    overflow:hidden;
+    height:100vh;
+    position:absolute;
+    width:100vw;
+    //box-shadow:inset 0 0 20px rgba(0,0,0,0.3);
+    .bg-ct{
+        z-index:-1;
+        background-image:url("../img/miku.jpg");
+        background-position:center;
+        background-size:cover;
+        //filter: blur(8px) brightness(0.7);
+        //background-image: linear-gradient(-30deg, #4ea7f3, #abfcff);
+        position:fixed;
+        height:100vh;
+        transform: scale(1.08);
+        //filter:blur(15px) brightness(0.6);
+        width:100vw;
+    }
+    
+}
+
+.notify-container{
+    position: fixed;
+    display: flex;
+    padding: 0 20px;
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    width: 100vw;
+    z-index: 11;
+    pointer-events: none;
+    transition:all 0.5s;
+    height: 100vh;
+    .notify{
+        background-color:rgba(15,15,15,0.6);
+        animation:notify-show-hide 5s ease-in-out;
+        border-right:7px solid rgba(0,0,0,0.4);
+        transition:all 0.5s;
+        color:white;
+        box-shadow:1px 1px 15px rgba(0,0,0,0.15);
+        margin-bottom:15px;
+        padding:13px 15px;
+        height:72px;
+        .title{
+            font-size:1.1rem;
+            
+        }
+        .content{
+            margin-top:5px;
+            color:#eee;
+            font-size:0.85rem;
+        }
+    }
+}
+@keyframes notify-show-hide{
+    0%{
+        opacity:0;
+        transform:translate(100vw,0);
+        margin-bottom:15px;
+    }
+    15%{
+        opacity:1;
+        transform:translate(0,0);
+        margin-bottom:15px;
+    }
+    85%{
+        opacity:1;
+        transform:translate(0,0);
+        margin-bottom:15px;
+    }
+    100%{
+        opacity:0;
+        margin-bottom:-72px;
+    }
+}
+.corner-button{
+    z-index:10;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.3));
+    position:absolute;
+    transition:all 0.5s;
+    &:hover{
+        filter: drop-shadow(0 0 25px rgba(0,0,0,0.5));
+    }
+}
+.index{
+    &:before{
+        margin: 22%;
+        content: "\f004";
+        font-size: 35px;
+        color: #ddd;
+        display: inline-block;
+        font-family: "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition:all 0.5s;
+    }
+    height:100px;
+    width:100px;
+    left:0;
+    position:absolute;
+    top:0;
+    background-color:rgba(0,0,0,0.5);
+    cursor: pointer;
+    clip-path: ellipse(100% 100% at 0 0);
+    -webkit-clip-path: ellipse(100% 100% at 0 0);
+    transition: all 0.5s;
+    &:hover{
+        background-color:rgba(0,0,0,0.7);
+    }
+    &:active{
+        height:120px;
+        width:120px;
+        &:before{
+            transform:scale(1.2);
+        }
+    }
+}
+
+.about{
+    z-index:10;
+    &:before{
+        margin: 20% 45%;
+        content: "\f64e";
+        font-size: 38px;
+        color: #ddd;
+        display: inline-block;
+        font-family: "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition:all 0.5s;
+    }
+    height:100px;
+    width:100px;
+    right:0;
+    position:absolute;
+    top:0;
+    background-color:rgba(0,0,0,0.5);
+    cursor: pointer;
+    clip-path: ellipse(100% 100% at 100% 0);
+    -webkit-clip-path: ellipse(100% 100% at 100% 0);
+    transition: all 0.5s;
+    &:hover{
+        background-color:rgba(0,0,0,0.7);
+    }
+    &:active{
+        height:120px;
+        width:120px;
+        &:before{
+            transform:scale(1.2);
+        }
+    }
+}
+
+.works{
+    z-index:10;
+    &:before{
+        margin: 40% 20%;
+        content: "\f4ce";
+        font-size: 35px;
+        color: #ddd;
+        display: inline-block;
+        font-family: "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all 0.5s;
+    }
+    height:100px;
+    width:100px;
+    left:0;
+    position:absolute;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    cursor: pointer;
+    clip-path: ellipse(100% 100% at 0 100%);
+    -webkit-clip-path: ellipse(100% 100% at 0 100%);
+    transition: all 0.5s;
+    &:hover{
+        background-color:rgba(0,0,0,0.7);
+    }
+    &:active{
+        height:120px;
+        width:120px;
+        &:before{
+            transform:scale(1.2);
+        }
+    }
+}
+
+.links{
+    z-index:10;
+    &:before{
+        margin: 45%;
+        content: "\f337";
+        font-size: 35px;
+        color: #ddd;
+        display: inline-block;
+        font-family: "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: all 0.5s;
+    }
+    height:100px;
+    width:100px;
+    right:0;
+    position:absolute;
+    bottom:0;
+    background-color:rgba(0,0,0,0.5);
+    cursor: pointer;
+    clip-path: ellipse(100% 100% at 100% 100%);
+    -webkit-clip-path: ellipse(100% 100% at 100% 100%);
+    transition: all 0.5s;
+    &:hover{
+        background-color:rgba(0,0,0,0.7);
+    }
+    &:active{
+        height:120px;
+        width:120px;
+        &:before{
+            transform:scale(1.2);
+        }
+    }
+}
+
+.main-content{
+    width:100vw;
+    height:100vh;
+    position:absolute;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 2000px;
+    z-index: 9;
+    .index-content{
+        position:absolute;
+        display:flex;
+        transition:opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+        opacity:0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.descr-icon{
+    background-color:#2f2f2f;
+    box-shadow: 1px 1px 70px rgba(0, 0, 0, 0.16);
+    height:120px;
+    width:120px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image:url(../img/avatar.jpg);
+    background-size:cover;
+    transition:all 0.75s;
+    .mdi{
+        margin: 15px 55px;
+        //content: "\f4ce";
+        font-size: 75px;
+        color: #eee;
+        display: inline-block;
+        font-family: "Material Design Icons";
+        text-rendering: auto;
+        line-height: inherit;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    &:active{
+        
+    }
+}
+
+.box{
+    background-color:rgba(0,0,0,0.6);
+    color:#eee;
+    margin-top:-60px;
+    padding:90px 0 40px;
+    display:flex;
+    height:250px;
+    width:500px;
+    flex-direction: column;
+    justify-content: center;
+    z-index:-1;
+    text-align: center;
+    box-shadow: 1px 1px 70px rgba(0, 0, 0, 0.16);
+    .title{
+        font-size:2rem;
+        margin-bottom:12px;
+    }
+    .text{
+        color:#ccc;
+        line-height:2.3;
+        font-size:0.785rem;
+        ruby{
+            color:#eee;
+        }
+    }
+}
+.next{
+    background-color:rgba(15,15,15,0.7);
+    width:100%;
+    width:500px;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    .mdi{
+        padding:20px 0;
+        font-size:29px;
+        width:100%;
+        text-align: center;
+        color:#eee;
+        cursor: pointer;
+        background-color:transparent;
+        transition:background-color 0.5s;
+        &:hover{
+            background-color:rgba(0,0,0,0.3);
+        }
+    }
+}
+.box-link{
+    height:544px;
+    padding:60px 0 30px;
+    .link-page{
+        position:absolute;
+        width:500px;
+    }
+    .link-list{
+        
+        width:100%;
+        justify-content: center;
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        padding:0 60px;
+        .a-friend{
+            transition:all 0.5s;
+            padding:15px;
+            min-width:140px;
+            img.blog-avatar {
+                border-radius: 50%;
+                width: 60px;
+                height: 60px;
+            }
+            
+            
+            .description {
+            transition:all 0.5s;
+                font-size: 0.75rem;
+                color: #cacaca;
+            }
+            
+            .text-container {
+                display: flex;
+                margin-left: 4px;
+                flex-direction: column;
+                justify-content: center;
+            }
+            
+            .link-list {
+            }
+            
+            .name {
+            transition:all 0.5s;
+                margin-top:5px;
+                color: #eee;
+            }
+            &:hover{
+                box-shadow:0px 1px 25px rgba(0,0,0,0.1);
+                background-color:rgba(255,255,255,0.2);
+                transform:translate(0,-3px); 
+                .name{
+                    color:#fff;
+                }
+                .description{
+                    color:#e1e1e1;
+                }
+            }
+        }
+    }
+}
+@keyframes rotate {
+    0% {transform:rotateY(0deg)}
+    40% {transform:rotateY(180deg)}
+    50%{transform:rotateY(180deg)}
+    100% {transform:rotateY(0deg)}
+}
+.zhuan{
+    transition:all 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(0,-191px) translateZ(-250px) rotateY(0deg);
+    display: flex;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+/* 弹幕相关 */
+
+.danmaku-container{
+    height:100vh;
+    width:100vw;
+    z-index:20;
+    position:absolute;
+    pointer-events: none;
+    .normal{
+        color:white;
+        font-size:1.5rem;
+        text-shadow:1px 1px 15px rgba(0,0,0,0.5);
+        animation-name:danmaku-right-to-left;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-fill-mode:forwards;
+    }
+}
+@keyframes danmaku-right-to-left {
+    from {transform:translate(100%)}
+    to {transform:translate(-100%)}
+}

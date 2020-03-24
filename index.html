@@ -6,14 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="renderer" content="webkit">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>贫困の蚊子</title>
+    <title>MoeGirl.email - 萌娘邮件系统</title>
     <link rel="stylesheet/less" href="css/poi.less">
     <script src="./js/less.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./js/poi.js" type="text/javascript" charset="utf-8"></script>
     <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="//at.alicdn.com/t/font_1710446_strg2qbpsw.css" type="text/css" />
 </head>
+<!-- 本index源代码由蚊子制作，已获取授权使用 -->
 <!-- 本index源代码未经授权 请勿随意转载或盗用 -->
-<!-- 请通过博客留言等方式联系我（蚊子 https://qwq.moe/）取得使用权 -->
+<!-- 请通过博客留言等方式联系蚊子（ https://qwq.moe/）取得使用权 -->
 <!-- 联系方式：i@qwq.moe -->
 <body>
 <div class="bg"><div class="bg-ct" style="filter:brightness(0.9);background-image:url(img/2.jpg)"></div></div>
@@ -21,10 +23,10 @@
 </div>
 <div class="notify-container"></div>
 
-<div class="corner-button" style="left:0;"><div class="index" onclick="zhuan('index')"></div></div>
-<div class="corner-button" style="right:0;"><div class="about" onclick="zhuan('about')"></div></div>
-<div class="corner-button" style="bottom:0;left:0"><div class="works" onclick="zhuan('works')"></div></div>
-<div class="corner-button" style="bottom:0;right:0;"><div class="links" onclick="zhuan('links')"></div></div>
+<!--<div class="corner-button" style="left:0;"><div class="index" onclick="zhuan('index')"></div></div>-->
+<!--<div class="corner-button" style="right:0;"><div class="about" onclick="zhuan('about')"></div></div>-->
+<!--<div class="corner-button" style="bottom:0;left:0"><div class="works" onclick="zhuan('works')"></div></div>-->
+<!--<div class="corner-button" style="bottom:0;right:0;"><div class="links" onclick="zhuan('links')"></div></div>-->
 
 <div class="main-content">
     <div class="zhuan">
@@ -39,43 +41,42 @@
 
     </div>
 </div>
-
+<script>
+    function jump() {
+        jump = 1;
+        setTimeout(function(){
+            if(jump == 1){
+                location.href="https://outlook.office365.com/moegirl.email";
+            }
+        }, 2000);
+    }
+</script>
 <template id="real-content">
     <div id="index">
         <div class="descr-icon"></div>
         <div class="box">
-            <div class="title">贫困の蚊子</div>
-            <div class="text">请给我<ruby>食物<rt>Food</rt>
-            </ruby>&nbsp;&nbsp;我不想再吃<ruby>土<rt>Earth</rt></ruby>了</div>
+            <div class="title">萌娘邮件系统</div>
+            <div class="text">为<ruby>可爱的孩♀子<rt>MoeGirl</rt>
+            </ruby>们&nbsp;&nbsp;打造的邮件系统</div>
 
-            <div class="text">「这不是Material Design」</div>
+            <div class="text">「 只有可爱的孩♀子才能使用呢 」</div>
         </div>
         <div class="next">
-            <a onclick="showNotify('提示','暂未开通捐赠，感谢支持')" target="_blank" class="mdi mdi-gift" ></a>
-            <a href="https://blog.qwq.moe" class="mdi mdi-home"></a>
-            <a href="https://github.com/Archeb" target="_blank" class="mdi mdi-github-circle"></a>
+<!--            <a onclick="showNotify('提示','暂未开通捐赠，感谢支持')" target="_blank" class="mdi mdi-gift" ></a>-->
+            <a target="_blank" href="https://qwq.best" class="mdi mdi-home"></a>
+            <a class="mdi mdi-information" onclick="zhuan('about')"></a>
+            <a class="mdi mdi-key" onclick="zhuan('works');jump();"></a>
         </div>
     </div>
 
     <div id="links">
 
         <div class="descr-icon" id="switch-link-page" style="background-image:none;margin-top:-110px;"><span class="mdi mdi-link"></span></div>
-        <div class="box box-link">
+        <div class="box box-link" style="/*height: 250px!important;*/">
             <div class="link-page" id="link-page-1">
                 <div class="link-list" style="margin-top:10px">
-                    <a class="a-friend" target="_blank" href="https://www.angelic47.com/"><img class="blog-avatar" src="https://secure.gravatar.com/avatar/af12f24d493e12b714cb70f3c7b3662e?s=100&r=G&d="><div class="text-container"><div class="name">47姐姐</div><div class="description">是一位可啪的少女</div></div></a>
-                    <a class="a-friend" target="_blank" href="https://moe.do/"><img class="blog-avatar" src="https://secure.gravatar.com/avatar/fef54942ab8aa68814f5dd90e4cf1614?s=100"><div class="text-container"><div class="name">早苗</div><div class="description">土豪 && 技术宅</div></div></a>
-                    <a class="a-friend" target="_blank" href="https://blog.berd.moe/"><img class="blog-avatar" src="https://secure.gravatar.com/avatar/1fa4149ce99f941a8add595687634141?s=55&amp;d=mm&amp;r=pg"><div class="text-container"><div class="name">鸟姐姐</div><div class="description">CS大佬</div></div></a>
-                </div>
-                <div class="link-list" style="margin-top:10px">
-                    <a class="a-friend" target="_blank" href="https://imoe.ac.cn/"><img class="blog-avatar" src="https://secure.gravatar.com/avatar/95046f94f4b960b994de72a2b8d9d07e?s=100&amp;r=G&amp;d="><div class="text-container"><div class="name">寒烟</div><div class="description">Good Gay</div></div></a>
-                    <a class="a-friend" target="_blank" href="https://digua.me/"><img class="blog-avatar" src="https://avatars0.githubusercontent.com/u/9943164?s=460&v=4"><div class="text-container"><div class="name">地瓜</div><div class="description">大佬，学习的</div></div></a>
-                    <a class="a-friend" target="_blank" href="https://linux.dog/"><img class="blog-avatar" src="https://secure.gravatar.com/avatar/d0287768799808c028e41367a008c788?s=255&r=G"><div class="text-container"><div class="name">蕾咪</div><div class="description">可爱的男孩子</div></div></a>
-                </div>
-                <div class="link-list" style="margin-top:10px">
-                    <a class="a-friend" target="_blank" href="https://boboliu.dev/"><img class="blog-avatar" src="https://www.gravatar.com/avatar/3090d6e8e88c88e82e916e0f20457ec9?s=128"><div class="text-container"><div class="name">Bobo酱</div><div class="description">Py很好的人，人形自走本子库</div></div></a>
-                    <a class="a-friend" target="_blank" href="http://9bie.org/"><img class="blog-avatar" src="https://secure.gravatar.com/avatar/c004f07e4aeea5ada1cc18fa390f6e09?s=55&amp;r=G&amp;d="><div class="text-container"><div class="name">⑨BIE</div><div class="description">人形自走ACGN百科全书</div></div></a>
-                    <a class="a-friend" target="_blank" href="https://godgov.cn/"><img class="blog-avatar" src="https://avatars1.githubusercontent.com/u/16414180?s=460&v=4"><div class="text-container"><div class="name">政府</div><div class="description">感觉我的站要被炸了呢</div></div></a>
+                    <a class="a-friend" target="_blank" href="https://qwq.best/"><img class="blog-avatar" src="/img/avatar.jpg"><div class="text-container"><div class="name">皮皮凛凛姬</div><div class="description">是站长哦~</div></div></a>
+                    <a class="a-friend" target="_blank" href="https://ohmyga.cn/"><img class="blog-avatar" src="/img/omg.jpg"><div class="text-container"><div class="name">ohmyga</div><div class="description">提供Outlook邮箱服务的omg鸽鸽~</div></div></a>
                 </div>
             </div>
         </div>
@@ -83,28 +84,35 @@
     </div>
 
     <div id="works">
-        <div class="descr-icon" style="background-image:none"><span class="mdi mdi-star"></span></div>
+        <div class="descr-icon" style="background-image:none"><span class="mdi mdi-key"></span></div>
         <div class="box">
-            <div class="title">作品</div>
-            <div class="text">作品？不存在的</div>
-            <div class="text">咸鱼是不会有作品的</div>
-            <div class="text">不过，可以来看看我的博客和GitHub</div>
+            <div class="title">正在跳转</div>
+            <div class="text">正在将您重定向至萌娘邮件系统身份认证页面...</div>
+            <div class="text">您可以点击下方左侧的按钮取消跳转</div>
+            <div class="text">也可以点击下方右侧的按钮立刻跳转</div>
+
         </div>
         <div class="next">
-            <a href="https://blog.qwq.moe" class="mdi mdi-home"></a>
-            <a href="https://github.com/Archeb" target="_blank" class="mdi mdi-github-circle"></a>
+            <a class="mdi mdi-cancel" onclick="zhuan('index');jump = 0;"></a>
+            <a class="mdi mdi-debug-step-over" href="https://outlook.office365.com/moegirl.email"></a>
         </div>
     </div>
+
     <div id="about">
         <div class="descr-icon" style="background-image:none"><span class="mdi mdi-information-variant"></span></div>
         <div class="box">
-            <div class="text">热爱<ruby>美少女游戏<rt>GalGame</rt></ruby>、FPS和轻小说的少年</div>
-            <div class="text">同时喜欢折腾前端、设计和一切科技产品，偶尔研究网安和IDC。</div>
-            <div class="text">居住在广州，热衷于<ruby>面基<rt>被肛</rt></ruby>，希望有一天能走遍全国</div>
-            <div class="text">欢迎来胖次群找我玩~</div>
+<!--            <div class="title">关于</div>-->
+            <div class="text">MoeGirl.email萌娘邮件系统</div>
+            <div class="text">是一个基于Outlook的域名邮箱系统</div>
+            <div class="text">是不是超可爱~</div>
+            <div class="text">申请邮箱请联系站长（绫川星凛）噢，联系方式请点击下方的按钮~</div>
+            <div class="text">目前只接受熟人的申请~</div>
+            <div class="text">P.S.不保证稳定性，不建议用于重要用途~</div>
         </div>
         <div class="next">
-            <a target="_blank" onclick="showNotify('提示','胖次群因为群主GHS被封辣！')" class="mdi mdi-qqchat"></a>
+            <a target="_blank" href="mailto:AyagawaSeirin@outlook.com" class="mdi mdi-email"></a>
+            <a target="_blank" href="https://t.me/AyagawaSeirin" class="mdi mdi-telegram"></a>
+            <a target="_blank" href="https://twitter.com/AyagawaSeirin" class="mdi mdi-twitter"></a>
         </div>
     </div>
 </template>
